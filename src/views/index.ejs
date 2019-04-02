@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+
+<!-- Bootstrap -->
+	<% include partials/head.ejs %>
+
+</head>
+<body>
+	<% include partials/nav.ejs %>
+
+
+<!-- HEADER -->
+
+	<header>
+	  <div class="jumbotron" id="contenedor_principal">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-lg-12">
+	          <h1 class="text-center">Bienvenido al portal de informes de Ingetech SAS</h1>
+	          <p class="text-center">En esta herramienta se podran crear y editar los informes de inspección.</p>
+	          <p>&nbsp;</p>
+
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</header>
+
+<!-- / HEADER -->
+
+<!--  SECTION-1 -->
+<section>
+
+  <div class="container ">
+
+  	<div class="row">
+  		<div class="col text-center col-md-6">
+				<a href="/crearInforme">
+  			<button class="img-circle btn btn-success" alt="140x140" style="width: 140px; height: 140px; border-radius: 50%;" data-holder-rendered="true" onClick="iniciarInforme()">Crear Informe</button>
+  			</a><br><br><br>
+  			<p>Crear un informe de inspección desde ceros.</p>
+  		</div>
+  		<div class="col text-center col-md-6">
+  			<form id="a_editar_informe_form">
+
+					<button form="a_editar_informe_form" class="img-circle btn btn-warning" type="submit" alt="140x140" style="width: 140px; height: 140px; border-radius: 50%;" data-holder-rendered="true">Editar Informe</button><br><br>
+					<input class="form-control" type="text" name="id_informe" placeholder="Identificador del informe"><br>
+  				<p>Edita un informe previamente guardado con su codigo de identificación</p>
+  			</form>
+  		</div>
+  	</div>
+
+
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+	<% include partials/footer.ejs %>
+<!-- / FOOTER -->
+
+
+<script type="text/javascript" src="/js/crear.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+
+
+</body>
+</html>
